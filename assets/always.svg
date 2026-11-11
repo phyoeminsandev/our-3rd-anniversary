@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" width="900" height="900" role="img" aria-labelledby="title desc">
+  <title id="title">Still my favorite view</title>
+  <desc id="desc">A glowing heart-shaped constellation surrounded by stars, nebula light and a crescent moon in a rose-coloured night sky.</desc>
+
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#180827"/>
+      <stop offset="0.5" stop-color="#3a1133"/>
+      <stop offset="1" stop-color="#641c39"/>
+    </linearGradient>
+    <radialGradient id="nebulaRose" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#e0507a" stop-opacity="0.45"/>
+      <stop offset="0.55" stop-color="#b01640" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#b01640" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nebulaGold" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#e7cfa3" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#e7cfa3" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="starGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff6df" stop-opacity="1"/>
+      <stop offset="0.35" stop-color="#ffe1a4" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#ffe1a4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldLine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5e4bd" stop-opacity="0.85"/>
+      <stop offset="0.5" stop-color="#d3ad64" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#a27a34" stop-opacity="0.7"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="0.45" stop-color="#10030a" stop-opacity="0"/>
+      <stop offset="1" stop-color="#10030a" stop-opacity="0.6"/>
+    </radialGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <mask id="crescentMask" maskUnits="userSpaceOnUse" x="660" y="140" width="180" height="180">
+      <rect x="660" y="140" width="180" height="180" fill="#fff"/>
+      <circle cx="756" cy="200" r="44" fill="#000"/>
+    </mask>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="900" fill="url(#night)"/>
+  <circle cx="620" cy="360" r="360" fill="url(#nebulaRose)"/>
+  <circle cx="260" cy="670" r="300" fill="url(#nebulaGold)"/>
+  <circle cx="180" cy="200" r="250" fill="url(#nebulaRose)" opacity="0.5"/>
+
+  <!-- stars -->
+  <g fill="#ffeac6">
+    <circle cx="74" cy="88" r="1.8" opacity="0.8"/>
+    <circle cx="140" cy="164" r="1.2" opacity="0.55"/>
+    <circle cx="214" cy="64" r="2.1" opacity="0.9"/>
+    <circle cx="288" cy="132" r="1.4" opacity="0.6"/>
+    <circle cx="356" cy="52" r="1.1" opacity="0.5"/>
+    <circle cx="440" cy="118" r="1.9" opacity="0.8"/>
+    <circle cx="512" cy="46" r="1.3" opacity="0.55"/>
+    <circle cx="592" cy="120" r="3" opacity="0.9"/>
+    <circle cx="672" cy="58" r="1.5" opacity="0.6"/>
+    <circle cx="758" cy="132" r="2.2" opacity="0.85"/>
+    <circle cx="834" cy="72" r="1.4" opacity="0.6"/>
+    <circle cx="52" cy="270" r="1.5" opacity="0.55"/>
+    <circle cx="118" cy="352" r="1.8" opacity="0.7"/>
+    <circle cx="190" cy="440" r="1.2" opacity="0.45"/>
+    <circle cx="58" cy="500" r="2" opacity="0.8"/>
+    <circle cx="128" cy="596" r="1.3" opacity="0.5"/>
+    <circle cx="204" cy="700" r="1.7" opacity="0.65"/>
+    <circle cx="80" cy="790" r="1.4" opacity="0.5"/>
+    <circle cx="240" cy="820" r="2.1" opacity="0.8"/>
+    <circle cx="700" cy="780" r="1.5" opacity="0.55"/>
+    <circle cx="780" cy="700" r="1.9" opacity="0.75"/>
+    <circle cx="850" cy="590" r="1.2" opacity="0.5"/>
+    <circle cx="812" cy="480" r="1.6" opacity="0.6"/>
+    <circle cx="860" cy="820" r="2" opacity="0.75"/>
+    <circle cx="650" cy="844" r="1.3" opacity="0.5"/>
+    <circle cx="420" cy="840" r="1.5" opacity="0.55"/>
+    <circle cx="508" cy="792" r="1.2" opacity="0.45"/>
+  </g>
+  <g fill="#ffeac6" opacity="0.45">
+    <circle cx="176" cy="230" r="0.9"/><circle cx="330" cy="192" r="0.8"/>
+    <circle cx="548" cy="196" r="0.9"/><circle cx="724" cy="230" r="0.8"/>
+    <circle cx="760" cy="360" r="0.9"/><circle cx="300" cy="590" r="0.8"/>
+    <circle cx="600" cy="680" r="0.8"/><circle cx="120" cy="700" r="0.8"/>
+  </g>
+
+  <!-- sparkle crosses -->
+  <g stroke="#fff5da" stroke-linecap="round" opacity="0.8">
+    <path d="M592 120v-14M592 120v14M592 120h-14M592 120h14" stroke-width="1.4"/>
+    <path d="M214 64v-8M214 64v8M214 64h-8M214 64h8" stroke-width="1.2"/>
+    <path d="M758 132v-10M758 132v10M758 132h-10M758 132h10" stroke-width="1.3"/>
+    <path d="M240 820v-8M240 820v8M240 820h-8M240 820h8" stroke-width="1.2"/>
+  </g>
+
+  <!-- crescent moon -->
+  <g transform="translate(736 214)">
+    <circle r="86" fill="url(#starGlow)" opacity="0.6"/>
+    <circle r="46" fill="#f7e5bf" mask="url(#crescentMask)"/>
+  </g>
+
+  <!-- orbit lines -->
+  <g fill="none" stroke="#e7cfa3" opacity="0.12">
+    <ellipse cx="450" cy="450" rx="360" ry="220" transform="rotate(-24 450 450)" stroke-width="1"/>
+    <ellipse cx="450" cy="450" rx="320" ry="330" transform="rotate(18 450 450)" stroke-width="0.8" stroke-dasharray="4 12"/>
+  </g>
+
+  <!-- glowing heart constellation -->
+  <g filter="url(#glow)">
+    <path d="M450 664L330 566 285 470 278 372 334 302 400 300 450 356 500 300 566 302 622 372 615 470 570 566Z"
+          fill="none" stroke="url(#goldLine)" stroke-width="2.2" stroke-linejoin="round" opacity="0.9"/>
+    <path d="M450 664L450 590" stroke="#e7cfa3" stroke-width="1" opacity="0.35"/>
+    <path d="M330 566l44-50M570 566l-44-50" stroke="#e7cfa3" stroke-width="1" opacity="0.3"/>
+  </g>
+
+  <!-- constellation stars -->
+  <g>
+    <g transform="translate(450 664)">
+      <circle r="26" fill="url(#starGlow)"/>
+      <circle r="4.5" fill="#fff8e8"/>
+    </g>
+    <g transform="translate(330 566)">
+      <circle r="18" fill="url(#starGlow)"/>
+      <circle r="3.4" fill="#fff8e8"/>
+    </g>
+    <g transform="translate(285 470)">
+      <circle r="15" fill="url(#starGlow)"/>
+      <circle r="2.8" fill="#fff8e8"/>
+    </g>
+    <g transform="translate(278 372)">
+      <circle r="17" fill="url(#starGlow)"/>
+      <circle r="3" fill="#fff8e8"/>
+    </g>
+    <g transform="translate(334 302)">
+      <circle r="20" fill="url(#starGlow)"/>
+      <circle r="3.6" fill="#fff8e8"/>
+    </g>
+    <g transform="translate(400 300)">
+      <circle r="14" fill="url(#starGlow)"/>
+      <circle r="2.6" fill="#fff8e8"/>
+    </g>
+    <g transform="translate(450 356)">
+      <circle r="24" fill="url(#starGlow)"/>
+      <circle r="4.2" fill="#fff8e8"/>
+    </g>
+    <g transform="translate(500 300)">
+      <circle r="14" fill="url(#starGlow)"/>
+      <circle r="2.6" fill="#fff8e8"/>
+    </g>
+    <g transform="translate(566 302)">
+      <circle r="20" fill="url(#starGlow)"/>
+      <circle r="3.6" fill="#fff8e8"/>
+    </g>
+    <g transform="translate(622 372)">
+      <circle r="17" fill="url(#starGlow)"/>
+      <circle r="3" fill="#fff8e8"/>
+    </g>
+    <g transform="translate(615 470)">
+      <circle r="15" fill="url(#starGlow)"/>
+      <circle r="2.8" fill="#fff8e8"/>
+    </g>
+    <g transform="translate(570 566)">
+      <circle r="18" fill="url(#starGlow)"/>
+      <circle r="3.4" fill="#fff8e8"/>
+    </g>
+  </g>
+
+  <!-- tiny companion stars -->
+  <g fill="#ffeac6" opacity="0.7">
+    <circle cx="376" cy="618" r="2.2"/>
+    <circle cx="524" cy="618" r="1.8"/>
+    <circle cx="390" cy="386" r="1.6"/>
+    <circle cx="510" cy="386" r="1.6"/>
+    <circle cx="450" cy="250" r="2"/>
+    <circle cx="450" cy="500" r="1.6"/>
+  </g>
+
+  <!-- shooting star -->
+  <g opacity="0.85">
+    <path d="M182 196l-86 30" stroke="#fff0cf" stroke-width="1.8" stroke-linecap="round"/>
+    <circle cx="182" cy="196" r="2.6" fill="#fff8e8"/>
+  </g>
+
+  <rect width="900" height="900" fill="url(#vignette)"/>
+  <rect width="900" height="900" filter="url(#grain)" opacity="0.13" style="mix-blend-mode:soft-light"/>
+</svg>

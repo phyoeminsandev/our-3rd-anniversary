@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" width="900" height="700" role="img" aria-labelledby="title desc">
+  <title id="title">Always one more adventure</title>
+  <desc id="desc">A little car drives down an empty road beneath a full moon and a sky full of stars.</desc>
+
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#170a2a"/>
+      <stop offset="0.45" stop-color="#3b1237"/>
+      <stop offset="0.75" stop-color="#742844"/>
+      <stop offset="1" stop-color="#a64d5c"/>
+    </linearGradient>
+    <radialGradient id="moonGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff3d2" stop-opacity="0.8"/>
+      <stop offset="0.4" stop-color="#ffdda2" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#ffdda2" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a1a2a"/>
+      <stop offset="0.4" stop-color="#24101c"/>
+      <stop offset="1" stop-color="#12050d"/>
+    </linearGradient>
+    <linearGradient id="carBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6e2c44"/>
+      <stop offset="0.5" stop-color="#4b172d"/>
+      <stop offset="1" stop-color="#2c0a19"/>
+    </linearGradient>
+    <radialGradient id="tailGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ff7b6e" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#e23d5a" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#e23d5a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hillA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4d1b37"/>
+      <stop offset="1" stop-color="#2c0d20"/>
+    </linearGradient>
+    <linearGradient id="hillB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2e0d20"/>
+      <stop offset="1" stop-color="#1a0512"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="0.55" stop-color="#12030c" stop-opacity="0"/>
+      <stop offset="1" stop-color="#12030c" stop-opacity="0.6"/>
+    </radialGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="700" fill="url(#night)"/>
+
+  <!-- stars -->
+  <g fill="#ffe9c4">
+    <circle cx="78" cy="66" r="1.8" opacity="0.8"/>
+    <circle cx="140" cy="120" r="1.2" opacity="0.55"/>
+    <circle cx="188" cy="48" r="2.2" opacity="0.9"/>
+    <circle cx="252" cy="92" r="1.4" opacity="0.65"/>
+    <circle cx="310" cy="38" r="1.1" opacity="0.5"/>
+    <circle cx="368" cy="112" r="1.8" opacity="0.8"/>
+    <circle cx="430" cy="52" r="1.4" opacity="0.7"/>
+    <circle cx="492" cy="132" r="1.1" opacity="0.5"/>
+    <circle cx="540" cy="70" r="2" opacity="0.85"/>
+    <circle cx="612" cy="40" r="1.3" opacity="0.6"/>
+    <circle cx="668" cy="116" r="1.6" opacity="0.7"/>
+    <circle cx="732" cy="58" r="1.1" opacity="0.55"/>
+    <circle cx="806" cy="104" r="2.1" opacity="0.9"/>
+    <circle cx="862" cy="46" r="1.4" opacity="0.65"/>
+    <circle cx="58" cy="196" r="1.3" opacity="0.5"/>
+    <circle cx="122" cy="248" r="1.7" opacity="0.7"/>
+    <circle cx="206" cy="192" r="1.1" opacity="0.55"/>
+    <circle cx="284" cy="252" r="1.9" opacity="0.8"/>
+    <circle cx="356" cy="206" r="1.2" opacity="0.5"/>
+    <circle cx="744" cy="224" r="1.6" opacity="0.6"/>
+    <circle cx="820" cy="196" r="1.2" opacity="0.5"/>
+    <circle cx="880" cy="286" r="1.8" opacity="0.7"/>
+    <circle cx="36" cy="330" r="1.5" opacity="0.6"/>
+    <circle cx="254" cy="336" r="1.2" opacity="0.45"/>
+    <circle cx="690" cy="308" r="1.4" opacity="0.5"/>
+  </g>
+  <g fill="#ffe9c4" opacity="0.5">
+    <circle cx="160" cy="168" r="0.9"/><circle cx="400" cy="164" r="0.8"/>
+    <circle cx="636" cy="178" r="0.9"/><circle cx="780" cy="150" r="0.8"/>
+    <circle cx="90" cy="282" r="0.8"/><circle cx="480" cy="286" r="0.8"/>
+  </g>
+
+  <!-- shooting star -->
+  <g opacity="0.7">
+    <path d="M688 116l-88 34" stroke="#ffe9c4" stroke-width="1.6" stroke-linecap="round"/>
+    <circle cx="688" cy="116" r="2.4" fill="#fff4d9"/>
+  </g>
+
+  <!-- moon -->
+  <circle cx="720" cy="150" r="120" fill="url(#moonGlow)"/>
+  <circle cx="720" cy="150" r="54" fill="#f7e5bf"/>
+  <circle cx="700" cy="132" r="9" fill="#e3c99d" opacity="0.55"/>
+  <circle cx="736" cy="166" r="13" fill="#e3c99d" opacity="0.45"/>
+  <circle cx="737" cy="126" r="5" fill="#e3c99d" opacity="0.5"/>
+
+  <!-- distant hills -->
+  <path d="M0 400l90-62 66 38 84-58 78 50 92-34 90 48 76-40 96 44 74-36 94 46v140H0z" fill="url(#hillA)" opacity="0.85"/>
+  <path d="M0 440l110-48 98 34 110-42 100 40 96-32 118 38 90-26 118 36v160H0z" fill="url(#hillB)"/>
+
+  <!-- pine tree line -->
+  <g fill="#160410">
+    <g transform="translate(40 404)">
+      <path d="M0 30L14 0l14 30zM-8 30L14 -6l22 36z"/>
+    </g>
+    <g transform="translate(92 420)">
+      <path d="M0 26L11 0l11 26zM-7 26L11 -5l18 31z"/>
+    </g>
+    <g transform="translate(790 414)">
+      <path d="M0 28L12 0l12 28zM-7 28L12 -5l19 33z"/>
+    </g>
+    <g transform="translate(846 428)">
+      <path d="M0 24L10 0l10 24zM-6 24L10 -4l16 28z"/>
+    </g>
+  </g>
+
+  <!-- road -->
+  <path d="M418 438h64L820 700H80z" fill="url(#road)"/>
+  <path d="M418 438h64L820 700H80z" fill="none" stroke="#8d5261" stroke-width="2" opacity="0.3"/>
+
+  <!-- road centre dashes -->
+  <g fill="#e7cfa3" opacity="0.8">
+    <path d="M448 452h4l3 18h-10z" opacity="0.5"/>
+    <path d="M445 486h10l4 24h-18z" opacity="0.6"/>
+    <path d="M441 528h18l5 32h-28z" opacity="0.7"/>
+    <path d="M436 580h28l6 40h-40z" opacity="0.8"/>
+    <path d="M429 644h42l7 46h-56z"/>
+  </g>
+
+  <!-- car (rear view) -->
+  <g>
+    <ellipse cx="450" cy="620" rx="130" ry="26" fill="#0c0208" opacity="0.7"/>
+    <!-- lower body -->
+    <rect x="348" y="524" width="204" height="88" rx="24" fill="url(#carBody)"/>
+    <!-- roof -->
+    <path d="M382 528c4-32 18-48 44-50h48c26 2 40 18 44 50z" fill="#3a0f24"/>
+    <!-- rear window -->
+    <path d="M402 524c4-22 14-33 34-34h32c20 1 30 12 34 34z" fill="#1c0a1a"/>
+    <path d="M410 520c4-16 12-24 27-25h30c15 1 23 9 27 25z" fill="#2a1024" opacity="0.9"/>
+    <!-- rear lights -->
+    <circle cx="384" cy="570" r="30" fill="url(#tailGlow)"/>
+    <circle cx="516" cy="570" r="30" fill="url(#tailGlow)"/>
+    <rect x="368" y="558" width="34" height="12" rx="6" fill="#ff8b78"/>
+    <rect x="498" y="558" width="34" height="12" rx="6" fill="#ff8b78"/>
+    <!-- bumper -->
+    <rect x="360" y="590" width="180" height="14" rx="7" fill="#1f0714"/>
+    <!-- number plate -->
+    <rect x="420" y="582" width="60" height="20" rx="4" fill="#f0d9b6" opacity="0.9"/>
+    <rect x="432" y="588" width="36" height="3" rx="1.5" fill="#7c4b52" opacity="0.6"/>
+    <rect x="438" y="594" width="24" height="3" rx="1.5" fill="#7c4b52" opacity="0.4"/>
+    <!-- wheels -->
+    <path d="M350 610h34v22h-34zM516 610h34v22h-34z" fill="#0f030b"/>
+  </g>
+
+  <!-- foreground grass -->
+  <g fill="#12040c">
+    <path d="M0 700v-76c24 12 42 36 54 76z"/>
+    <path d="M900 700v-82c-28 14-46 40-58 82z"/>
+  </g>
+
+  <rect width="900" height="700" fill="url(#vignette)"/>
+  <rect width="900" height="700" filter="url(#grain)" opacity="0.13" style="mix-blend-mode:soft-light"/>
+</svg>

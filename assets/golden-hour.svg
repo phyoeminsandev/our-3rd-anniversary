@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1120" width="900" height="1120" role="img" aria-labelledby="title desc">
+  <title id="title">Golden hour, golden us</title>
+  <desc id="desc">Two silhouettes stand close together on a beach as a warm sun sets over a rose-coloured sea.</desc>
+
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd9be"/>
+      <stop offset="0.34" stop-color="#f9b2a6"/>
+      <stop offset="0.62" stop-color="#e8838f"/>
+      <stop offset="0.82" stop-color="#b95268"/>
+      <stop offset="1" stop-color="#8a3552"/>
+    </linearGradient>
+    <radialGradient id="sunglow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff2cf" stop-opacity="1"/>
+      <stop offset="0.35" stop-color="#ffd79a" stop-opacity="0.75"/>
+      <stop offset="0.7" stop-color="#ffb27d" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#ffb27d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff7de"/>
+      <stop offset="0.6" stop-color="#ffda9c"/>
+      <stop offset="1" stop-color="#f9b078"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a44d63"/>
+      <stop offset="0.45" stop-color="#7b2f4b"/>
+      <stop offset="1" stop-color="#451429"/>
+    </linearGradient>
+    <linearGradient id="sand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4d1a2e"/>
+      <stop offset="0.4" stop-color="#391023"/>
+      <stop offset="1" stop-color="#1f0612"/>
+    </linearGradient>
+    <linearGradient id="reflect" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe4b0" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ffbb82" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="0.5" cy="0.45" r="0.78">
+      <stop offset="0.5" stop-color="#1c0510" stop-opacity="0"/>
+      <stop offset="1" stop-color="#1c0510" stop-opacity="0.65"/>
+    </radialGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="1120" fill="url(#sky)"/>
+
+  <!-- sun glow and disc -->
+  <circle cx="622" cy="676" r="310" fill="url(#sunglow)"/>
+  <circle cx="622" cy="664" r="132" fill="url(#sun)"/>
+  <circle cx="622" cy="664" r="132" fill="none" stroke="#fff6dc" stroke-width="2" opacity="0.5"/>
+
+  <!-- soft cloud bands -->
+  <g fill="#fff0e1" opacity="0.22">
+    <ellipse cx="330" cy="300" rx="190" ry="16"/>
+    <ellipse cx="500" cy="356" rx="130" ry="11"/>
+    <ellipse cx="720" cy="246" rx="160" ry="13"/>
+    <ellipse cx="210" cy="470" rx="150" ry="10"/>
+  </g>
+  <g fill="#fff4e7" opacity="0.16">
+    <ellipse cx="700" cy="510" rx="200" ry="12"/>
+  </g>
+
+  <!-- birds -->
+  <g fill="none" stroke="#5d2438" stroke-width="2" opacity="0.55">
+    <path d="M208 596c10-8 18-8 26 0M238 612c8-7 15-7 22 0"/>
+    <path d="M760 590c8-7 15-7 22 0M780 606c7-6 13-6 19 0"/>
+    <path d="M286 540c7-6 14-6 20 0"/>
+  </g>
+
+  <!-- sea -->
+  <rect y="760" width="900" height="196" fill="url(#sea)"/>
+  <rect y="760" width="900" height="2" fill="#ffd8a2" opacity="0.4"/>
+
+  <!-- sun reflection -->
+  <g fill="url(#reflect)">
+    <ellipse cx="622" cy="776" rx="120" ry="9"/>
+    <ellipse cx="622" cy="800" rx="88" ry="7"/>
+    <ellipse cx="622" cy="824" rx="64" ry="6"/>
+    <ellipse cx="622" cy="850" rx="44" ry="5"/>
+    <ellipse cx="622" cy="876" rx="30" ry="4"/>
+    <ellipse cx="622" cy="902" rx="20" ry="3"/>
+    <ellipse cx="622" cy="926" rx="12" ry="2.5"/>
+  </g>
+  <g stroke="#ffd9a0" stroke-width="2" opacity="0.35">
+    <path d="M480 812h70M700 830h86M540 856h50M716 878h58M580 902h34"/>
+  </g>
+
+  <!-- shoreline -->
+  <path d="M0 932c120-16 260-22 450-22s330 6 450 22v210H0z" fill="url(#sand)"/>
+  <path d="M0 934c120-16 260-22 450-22s330 6 450 22" fill="none" stroke="#f5c194" opacity="0.28" stroke-width="2"/>
+
+  <!-- couple silhouettes -->
+  <g fill="#240812">
+    <!-- shadow -->
+    <ellipse cx="388" cy="1032" rx="170" ry="26" fill="#18040d" opacity="0.55"/>
+
+    <!-- person on the left: long dress, hair up -->
+    <path d="M320 1040c-4-72 2-132 28-160 9-10 18-16 28-20l-4-24h52l-4 26c12 5 22 12 30 24 24 32 30 92 26 154z" />
+    <circle cx="374" cy="798" r="36"/>
+    <path d="M348 776c4-26 16-40 34-40 20 0 32 16 32 42-10-12-24-17-42-15-9 1-17 5-24 13z" fill="#3a1020"/>
+    <circle cx="404" cy="766" r="14" fill="#3a1020"/>
+
+    <!-- person on the right: arm around, short hair -->
+    <path d="M424 1040c-8-64 0-118 24-144 10-11 22-17 36-19l-2-20h44l-2 22c14 4 26 12 34 26 20 34 22 86 16 135z" fill="#240812"/>
+    <circle cx="476" cy="818" r="32"/>
+    <path d="M450 812c-2-26 10-42 28-42 20 0 30 18 28 44-6-12-18-19-32-19-10 0-18 6-24 17z" fill="#3a1020"/>
+
+    <!-- linked hands -->
+    <path d="M424 912c-18 8-30 18-38 32" fill="none" stroke="#240812" stroke-width="20" stroke-linecap="round"/>
+  </g>
+
+  <!-- warm rim light on the couple -->
+  <g fill="none" stroke="#ffd9a0" stroke-width="2.4" opacity="0.35">
+    <path d="M409 774c10-16 24-24 42-22"/>
+    <path d="M500 794c10 8 16 18 20 30"/>
+    <path d="M450 900c14-20 30-32 46-36"/>
+  </g>
+
+  <!-- foreground grasses -->
+  <g fill="#18040d" opacity="0.9">
+    <path d="M0 1120v-88c30 18 52 42 66 88z"/>
+    <path d="M900 1120v-96c-34 20-58 46-74 96z"/>
+    <path d="M52 1084c8-34 22-56 40-68-6 28-8 52-6 76z" opacity="0.7"/>
+    <path d="M848 1080c-8-32-22-54-40-66 6 26 8 48 6 70z" opacity="0.7"/>
+  </g>
+
+  <rect width="900" height="1120" fill="url(#vignette)"/>
+  <rect width="900" height="1120" filter="url(#grain)" opacity="0.12" style="mix-blend-mode:soft-light"/>
+</svg>

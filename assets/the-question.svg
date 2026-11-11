@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1120" width="900" height="1120" role="img" aria-labelledby="title desc">
+  <title id="title">The easiest yes</title>
+  <desc id="desc">A proposal on a hill beneath a glowing full moon and a sky full of stars.</desc>
+
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1d0a2e"/>
+      <stop offset="0.42" stop-color="#431333"/>
+      <stop offset="0.75" stop-color="#6b1e3c"/>
+      <stop offset="1" stop-color="#2a0716"/>
+    </linearGradient>
+    <radialGradient id="moonGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff2cf" stop-opacity="0.9"/>
+      <stop offset="0.35" stop-color="#ffdca0" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ffdca0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ringGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff4d6" stop-opacity="1"/>
+      <stop offset="0.3" stop-color="#ffe0a0" stop-opacity="0.65"/>
+      <stop offset="1" stop-color="#ffe0a0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#310f22"/>
+      <stop offset="1" stop-color="#14030c"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5e4bd"/>
+      <stop offset="0.55" stop-color="#d3ad64"/>
+      <stop offset="1" stop-color="#a27a34"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="0.5" cy="0.45" r="0.78">
+      <stop offset="0.5" stop-color="#10030a" stop-opacity="0"/>
+      <stop offset="1" stop-color="#10030a" stop-opacity="0.65"/>
+    </radialGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="1120" fill="url(#night)"/>
+
+  <!-- stars -->
+  <g fill="#ffeac6">
+    <circle cx="84" cy="120" r="2" opacity="0.85"/>
+    <circle cx="148" cy="72" r="1.3" opacity="0.6"/>
+    <circle cx="210" cy="180" r="1.6" opacity="0.7"/>
+    <circle cx="276" cy="100" r="2.2" opacity="0.9"/>
+    <circle cx="340" cy="210" r="1.2" opacity="0.55"/>
+    <circle cx="412" cy="84" r="1.8" opacity="0.8"/>
+    <circle cx="470" cy="176" r="1.4" opacity="0.6"/>
+    <circle cx="538" cy="70" r="2" opacity="0.85"/>
+    <circle cx="596" cy="220" r="1.3" opacity="0.55"/>
+    <circle cx="690" cy="88" r="1.6" opacity="0.65"/>
+    <circle cx="764" cy="160" r="2.1" opacity="0.9"/>
+    <circle cx="838" cy="96" r="1.4" opacity="0.6"/>
+    <circle cx="52" cy="300" r="1.5" opacity="0.55"/>
+    <circle cx="126" cy="382" r="1.9" opacity="0.75"/>
+    <circle cx="196" cy="300" r="1.2" opacity="0.5"/>
+    <circle cx="262" cy="420" r="1.6" opacity="0.65"/>
+    <circle cx="352" cy="350" r="1.3" opacity="0.5"/>
+    <circle cx="438" cy="430" r="2" opacity="0.8"/>
+    <circle cx="516" cy="330" r="1.4" opacity="0.55"/>
+    <circle cx="584" cy="440" r="1.7" opacity="0.7"/>
+    <circle cx="664" cy="360" r="1.2" opacity="0.5"/>
+    <circle cx="744" cy="470" r="1.5" opacity="0.6"/>
+    <circle cx="822" cy="350" r="1.9" opacity="0.75"/>
+    <circle cx="866" cy="470" r="1.3" opacity="0.5"/>
+    <circle cx="82" cy="520" r="1.4" opacity="0.45"/>
+    <circle cx="300" cy="540" r="1.2" opacity="0.4"/>
+    <circle cx="760" cy="560" r="1.6" opacity="0.5"/>
+  </g>
+  <g fill="#ffeac6" opacity="0.5">
+    <circle cx="170" cy="240" r="0.9"/><circle cx="500" cy="110" r="0.9"/>
+    <circle cx="636" cy="300" r="0.8"/><circle cx="880" cy="220" r="0.9"/>
+    <circle cx="240" cy="500" r="0.8"/><circle cx="690" cy="520" r="0.8"/>
+  </g>
+
+  <!-- shooting star -->
+  <g opacity="0.8">
+    <path d="M300 250l-120 52" stroke="#fff0cf" stroke-width="1.8" stroke-linecap="round"/>
+    <circle cx="300" cy="250" r="3" fill="#fff6df"/>
+  </g>
+
+  <!-- moon -->
+  <circle cx="690" cy="288" r="230" fill="url(#moonGlow)"/>
+  <circle cx="690" cy="288" r="94" fill="#f7e6c1"/>
+  <circle cx="660" cy="262" r="16" fill="#e4c99a" opacity="0.5"/>
+  <circle cx="714" cy="314" r="24" fill="#e4c99a" opacity="0.4"/>
+  <circle cx="716" cy="250" r="9" fill="#e4c99a" opacity="0.45"/>
+  <circle cx="654" cy="326" r="8" fill="#e4c99a" opacity="0.4"/>
+
+  <!-- constellation heart (small) -->
+  <g opacity="0.5" stroke="#e7cfa3" stroke-width="1" fill="none">
+    <path d="M140 640l-34-26-8-34 26-28 32 4 14 22 16-20 32-2 24 28-10 34-38 28-28-20z"/>
+    <circle cx="140" cy="640" r="2.5" fill="#ffeac6"/>
+    <circle cx="106" cy="614" r="2" fill="#ffeac6"/>
+    <circle cx="98" cy="580" r="2" fill="#ffeac6"/>
+    <circle cx="124" cy="552" r="2" fill="#ffeac6"/>
+    <circle cx="156" cy="556" r="2" fill="#ffeac6"/>
+    <circle cx="170" cy="578" r="2" fill="#ffeac6"/>
+    <circle cx="186" cy="558" r="2" fill="#ffeac6"/>
+    <circle cx="218" cy="556" r="2" fill="#ffeac6"/>
+    <circle cx="242" cy="584" r="2" fill="#ffeac6"/>
+    <circle cx="232" cy="618" r="2" fill="#ffeac6"/>
+  </g>
+
+  <!-- distant hills -->
+  <path d="M0 900c120-70 220-96 320-78s200 72 300 62 180-46 280-22v258H0z" fill="#260a18" opacity="0.85"/>
+
+  <!-- foreground hill -->
+  <path d="M0 1000c130-46 280-64 450-58s320 26 450 70v108H0z" fill="url(#hill)"/>
+
+  <!-- couple silhouettes -->
+  <g fill="#190510">
+    <!-- standing figure -->
+    <circle cx="390" cy="708" r="37"/>
+    <path d="M356 686c2-28 14-44 34-44 22 0 34 18 34 46-10-14-22-20-36-19-13 1-24 7-32 17z" fill="#2c0d1c"/>
+    <path d="M344 760c10-24 26-36 46-36 22 0 38 12 48 36 12 48 18 120 18 200-24 18-42 24-66 24s-42-6-64-24c0-84 6-152 18-200z" fill="#190510"/>
+    <path d="M360 730c-6 66-8 132-6 216" stroke="#2c0d1c" stroke-width="3" opacity="0.6" fill="none"/>
+    <!-- standing arm reaching down -->
+    <path d="M430 790c20 20 34 44 40 68" fill="none" stroke="#190510" stroke-width="20" stroke-linecap="round"/>
+
+    <!-- kneeling figure -->
+    <circle cx="560" cy="812" r="30"/>
+    <path d="M536 802c2-18 10-30 25-30 16 0 27 13 27 34-8-9-16-13-27-13-9 0-18 3-25 9z" fill="#2c0d1c"/>
+    <path d="M532 844c-12 44-14 92 0 130l58 6c-2-54-6-98-18-130-12-12-28-14-40-6z" fill="#190510"/>
+    <!-- bent knee and leg -->
+    <path d="M566 976l58 34h48" fill="none" stroke="#190510" stroke-width="34" stroke-linecap="round"/>
+    <!-- offering arm -->
+    <path d="M548 868c-16 6-28 14-36 26" fill="none" stroke="#190510" stroke-width="18" stroke-linecap="round"/>
+  </g>
+
+  <!-- rim light -->
+  <g fill="none" stroke="#ffdca8" stroke-width="2.2" opacity="0.4">
+    <path d="M419 692c9-14 22-22 38-22"/>
+    <path d="M445 776c10 10 18 22 24 36"/>
+    <path d="M583 798c8 6 13 14 15 24"/>
+    <path d="M528 876c-12 6-20 14-24 24"/>
+  </g>
+
+  <!-- the ring -->
+  <g transform="translate(512 892)">
+    <circle r="54" fill="url(#ringGlow)"/>
+    <circle r="13" fill="none" stroke="url(#gold)" stroke-width="4"/>
+    <path d="M0-21l-8 9h16z" fill="#f8eac6"/>
+    <path d="M-8-12h16l-8 12z" fill="#b01640" opacity="0.85"/>
+    <circle cy="-21" r="2" fill="#fffdf2"/>
+    <g stroke="#ffe6b3" stroke-width="1.4" stroke-linecap="round" opacity="0.9">
+      <path d="M-30-30l-8-8M30-30l8-8M-36 6h-10M36 6h10"/>
+    </g>
+  </g>
+
+  <!-- tiny sparkles -->
+  <g fill="#ffeac6">
+    <circle cx="472" cy="868" r="2" opacity="0.8"/>
+    <circle cx="552" cy="862" r="1.6" opacity="0.7"/>
+    <circle cx="528" cy="936" r="1.4" opacity="0.6"/>
+  </g>
+
+  <rect width="900" height="1120" fill="url(#vignette)"/>
+  <rect width="900" height="1120" filter="url(#grain)" opacity="0.13" style="mix-blend-mode:soft-light"/>
+</svg>

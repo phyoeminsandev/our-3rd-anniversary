@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy 3rd Anniversary, My Love · Three Years of Us</title>
+  <meta name="description" content="A little corner of the internet for three years of us — our memories, our letter, and a surprise made with love.">
+  <meta name="theme-color" content="#430b21">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Happy 3rd Anniversary, My Love">
+  <meta property="og:description" content="Three years, a thousand little moments, and one great love story. Come walk down memory lane.">
+  <meta property="og:image" content="assets/golden-hour.svg">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&amp;family=Manrope:wght@300;400;500;600;700;800&amp;family=Caveat:wght@400;500;600&amp;display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <noscript>
+    <style>
+      .reveal, .hero-eyebrow, .hero-title, .hero-sub, .counter-wrap, .hero-actions { opacity: 1 !important; transform: none !important; }
+      .scroll-cue { display: none; }
+    </style>
+  </noscript>
+</head>
+<body>
+
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+  <div class="page-grain" aria-hidden="true"></div>
+  <a class="skip-link" href="#story">Skip to our story</a>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar navbar-expand-lg fixed-top site-nav" id="siteNav">
+    <div class="container">
+      <a class="navbar-brand" href="#home" aria-label="P and H, back to top">
+        <span class="brand-mark">P<span class="amp">&amp;</span>H</span>
+        <span class="brand-sub">est. 2023</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="toggler-bar"></span>
+        <span class="toggler-bar"></span>
+        <span class="toggler-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#story">Our Story</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Memories</a></li>
+          <li class="nav-item"><a class="nav-link" href="#letter">The Letter</a></li>
+          <li class="nav-item"><a class="nav-link" href="#surprise">A Surprise</a></li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a class="nav-cta" href="#surprise">Celebrate <i class="bi bi-heart-fill"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="home">
+    <canvas id="heartCanvas" aria-hidden="true"></canvas>
+    <div class="hero-orb hero-orb--1" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb--2" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb--3" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <p class="eyebrow hero-eyebrow">
+          <span class="eyebrow-line"></span>
+          12 · 11 · 2023 — where forever began
+          <span class="eyebrow-line"></span>
+        </p>
+
+        <h1 class="hero-title">
+          Happy <span class="glow-year">3<sup>rd</sup></span><br>
+          Anniversary,<br>
+          <em>My Love!</em>
+        </h1>
+
+        <p class="hero-sub">
+          Three years of quiet moments shared together, spontaneous adventures, and a love that grows softer and deeper with every passing day. Here's to us — and to every unwritten chapter of our future still waiting to be told.
+        </p>
+
+        <div class="counter-wrap">
+          <p class="counter-caption" id="counterCaption"><i class="bi bi-heart-fill"></i> Counting down to our 3rd anniversary</p>
+          <div class="counter" role="group" aria-label="Countdown to our 3rd anniversary on November 12, 2026">
+            <div class="counter-unit">
+              <span class="counter-value" id="counterYears">00</span>
+              <span class="counter-label">Years</span>
+            </div>
+            <div class="counter-unit">
+              <span class="counter-value" id="counterDays">03</span>
+              <span class="counter-label">Days</span>
+            </div>
+            <div class="counter-unit">
+              <span class="counter-value" id="counterHours">00</span>
+              <span class="counter-label">Hours</span>
+            </div>
+            <div class="counter-unit">
+              <span class="counter-value" id="counterMinutes">00</span>
+              <span class="counter-label">Minutes</span>
+            </div>
+            <div class="counter-unit">
+              <span class="counter-value" id="counterSeconds">00</span>
+              <span class="counter-label">Seconds</span>
+            </div>
+          </div>
+          <p class="counter-footnote"><strong data-total-days>1,092</strong> days of us — and counting.</p>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#story" class="btn-romance">
+            Walk down memory lane <i class="bi bi-arrow-down-right"></i>
+          </a>
+          <a href="#letter" class="btn-outline-romance">
+            <i class="bi bi-envelope-heart"></i> Read my letter
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="year-stamp" aria-hidden="true">
+      <svg viewBox="0 0 200 200" role="presentation">
+        <defs>
+          <path id="stampCircle" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"></path>
+        </defs>
+        <circle cx="100" cy="100" r="98" fill="none" stroke="currentColor" stroke-width="0.8" opacity="0.5"></circle>
+        <circle cx="100" cy="100" r="88" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.35"></circle>
+        <text>
+          <textPath href="#stampCircle" startOffset="0%">THREE YEARS OF US · 2023 — 2026 · ALWAYS &amp; FOREVER ·</textPath>
+        </text>
+        <path class="stamp-heart" d="M100 132c-18-14-30-23-30-36 0-9 7-15 15-15 6 0 11 3 15 8 4-5 9-8 15-8 8 0 15 6 15 15 0 13-12 22-30 36z"></path>
+      </svg>
+    </div>
+
+    <a href="#story" class="scroll-cue" aria-label="Scroll to our story">
+      <span>Scroll for our story</span>
+      <span class="scroll-line"></span>
+    </a>
+  </header>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="love-marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-set">
+        <span>Three years of us</span><i class="bi bi-heart-fill"></i>
+        <span><span data-total-days>1,092</span> days together</span><i class="bi bi-stars"></i>
+        <span>One great love story</span><i class="bi bi-heart-fill"></i>
+        <span>Forever to go</span><i class="bi bi-stars"></i>
+        <span>Est. 12 · 11 · 2023</span><i class="bi bi-heart-fill"></i>
+      </div>
+      <div class="marquee-set">
+        <span>Three years of us</span><i class="bi bi-heart-fill"></i>
+        <span><span data-total-days>1,092</span> days together</span><i class="bi bi-stars"></i>
+        <span>One great love story</span><i class="bi bi-heart-fill"></i>
+        <span>Forever to go</span><i class="bi bi-stars"></i>
+        <span>Est. 12 · 11 · 2023</span><i class="bi bi-heart-fill"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ STORY / TIMELINE ============ -->
+  <main id="main">
+  <section class="section story-section" id="story">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow eyebrow--center"><span class="eyebrow-line"></span>Our story<span class="eyebrow-line"></span></p>
+        <h2 class="section-title">Three years, one <em>beautiful</em> heartbeat.</h2>
+        <p class="section-sub">
+          It started with a nervous hello and a conversation that refused to end.
+          Somewhere between then and now, a thousand ordinary moments quietly
+          became the best years of our lives.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-line" aria-hidden="true"></div>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-card">
+            <div class="timeline-media">
+              <img src="assets/first_memory.jpg" alt="Two silhouettes sharing a candlelit table in a café at dusk" loading="lazy" width="900" height="1120">
+            </div>
+            <div class="timeline-body">
+              <span class="year-tag">Year One · 2023 — 2024</span>
+              <h3>Where it all began</h3>
+              <p>
+                In a world full of noise, holding you close feels like the only place that matters. Every shared glance and quiet smile with you is my favorite kind of home.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-dot" aria-hidden="true">
+            <span class="dot-num">01</span>
+            <i class="bi bi-heart-fill"></i>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-card">
+            <div class="timeline-media">
+              <img src="assets/second.jpg" alt="Flat-lay illustration of coffee cups, a polaroid, dried flowers and a handwritten note" loading="lazy" width="900" height="900">
+            </div>
+            <div class="timeline-body">
+              <span class="year-tag">Year Two · 2024 — 2025</span>
+              <h3>Our little world, built together</h3>
+              <p>
+                Somewhere between shared smiles and quiet glances under the open sky, a thousand ordinary moments became the best years of our lives. Here’s to building our own piece of happiness, side by side.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-dot" aria-hidden="true">
+            <span class="dot-num">02</span>
+            <i class="bi bi-heart-fill"></i>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-card">
+            <div class="timeline-media">
+              <img src="assets/third.jpg" alt="A couple silhouetted against a golden sunset by the sea" loading="lazy" width="900" height="1120">
+            </div>
+            <div class="timeline-body">
+              <span class="year-tag">Year Three · 2025 — 2026</span>
+              <h3>Forever, in every direction</h3>
+              <p>
+                Dressed up for the special moments, but three years later, my eyes still only look for you. Through every milestone and every journey, you are still the best thing that ever happened to me.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-dot" aria-hidden="true">
+            <span class="dot-num">03</span>
+            <i class="bi bi-heart-fill"></i>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- ============ GALLERY ============ -->
+  <section class="section gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow eyebrow--center"><span class="eyebrow-line"></span>Memory lane<span class="eyebrow-line"></span></p>
+        <h2 class="section-title">A thousand little <em>forevers</em>.</h2>
+        <p class="section-sub">
+          Every photo is a tiny time machine. Tap one to stay a little longer.
+        </p>
+      </div>
+
+      <div class="masonry">
+        <figure class="gallery-item reveal" data-title="The first hello" data-meta="Chapter one · 2023" tabindex="0" role="button" aria-label="View photo: The first hello">
+          <img src="assets/1.jpg" alt="Two silhouettes sharing a candlelit table in a café at dusk" loading="lazy" width="900" height="1120">
+          <span class="gallery-zoom" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></span>
+          <figcaption class="gallery-overlay">
+            <span class="gallery-meta">Chapter one · 2023</span>
+            <span class="gallery-title">Where It All Began</span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item reveal" data-title="Golden hour, golden us" data-meta="Somewhere by the water" tabindex="0" role="button" aria-label="View photo: Golden hour, golden us" style="--d:.08s">
+          <img src="assets/2.jpg" alt="A couple silhouetted against a golden sunset by the sea" loading="lazy" width="900" height="1120">
+          <span class="gallery-zoom" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></span>
+          <figcaption class="gallery-overlay">
+            <span class="gallery-meta">YEAR TWO · 2024</span>
+            <span class="gallery-title">Built For Two</span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item reveal" data-title="Always one more adventure" data-meta="Road trip · 2024" tabindex="0" role="button" aria-label="View photo: Always one more adventure" style="--d:.16s">
+          <img src="assets/3.jpg" alt="A car driving down an empty road beneath a starry night sky" loading="lazy" width="900" height="700">
+          <span class="gallery-zoom" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></span>
+          <figcaption class="gallery-overlay">
+            <span class="gallery-meta">YEAR THREE · 2025</span>
+            <span class="gallery-title">Forever In Every Direction</span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item reveal" data-title="The little in-between" data-meta="Ordinary days" tabindex="0" role="button" aria-label="View photo: The little in-between" style="--d:.1s">
+          <img src="assets/4.jpg" alt="Flat-lay illustration of coffee cups, a polaroid, dried flowers and a handwritten note" loading="lazy" width="900" height="900">
+          <span class="gallery-zoom" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></span>
+          <figcaption class="gallery-overlay">
+            <span class="gallery-meta">Ordinary days</span>
+            <span class="gallery-title">The little in-between</span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item reveal" data-title="The easiest yes" data-meta="Starry night · 2025" tabindex="0" role="button" aria-label="View photo: The easiest yes" style="--d:.18s">
+          <img src="assets/5.jpg" alt="A proposal beneath a full moon and a sky full of stars" loading="lazy" width="900" height="1120">
+          <span class="gallery-zoom" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></span>
+          <figcaption class="gallery-overlay">
+            <span class="gallery-meta">Starry night · 2025</span>
+            <span class="gallery-title">The easiest yes</span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item reveal" data-title="Still my favorite view" data-meta="Today &amp; always" tabindex="0" role="button" aria-label="View photo: Still my favorite view" style="--d:.26s">
+          <img src="assets/6.jpg" alt="A glowing heart-shaped constellation in a rose and plum night sky" loading="lazy" width="900" height="900">
+          <span class="gallery-zoom" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i></span>
+          <figcaption class="gallery-overlay">
+            <span class="gallery-meta">Today &amp; always</span>
+            <span class="gallery-title">Still my favorite view</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LETTER ============ -->
+  <section class="section letter-section" id="letter">
+    <div class="container">
+      <div class="row align-items-center g-5 gy-5">
+        <div class="col-lg-6">
+          <div class="letter-copy reveal">
+            <p class="eyebrow"><span class="eyebrow-line"></span>Sealed with love</p>
+            <h2 class="section-title">A letter for <em>you</em>.</h2>
+            <p class="section-sub">
+              Some things are too big for a text message. So I wrote this one the
+              old-fashioned way — with a wax seal, a quiet moment, and every bit
+              of my heart. Go on, open it.
+            </p>
+            <p class="handwritten">P.S. I still get butterflies.</p>
+            <button class="btn-romance" type="button" data-bs-toggle="modal" data-bs-target="#letterModal">
+              Read my letter <i class="bi bi-envelope-heart"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="envelope-stage reveal" style="--d:.15s">
+            <button class="envelope-trigger" type="button" data-bs-toggle="modal" data-bs-target="#letterModal" aria-label="Open the anniversary love letter">
+              <span class="envelope">
+                <span class="envelope-back"></span>
+                <span class="envelope-letter">
+                  <span class="letter-mini">for my favorite person</span>
+                  <span class="letter-monogram">P &amp; H</span>
+                  <span class="letter-mini">with all my love</span>
+                </span>
+                <span class="envelope-front"></span>
+                <span class="envelope-flap"></span>
+                <span class="wax-seal"><i class="bi bi-heart-fill"></i></span>
+              </span>
+              <span class="envelope-hint"><i class="bi bi-hand-index-thumb"></i> Tap to open</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SURPRISE ============ -->
+  <section class="surprise-section" id="surprise">
+    <span class="float-heart fh-1" aria-hidden="true">♥</span>
+    <span class="float-heart fh-2" aria-hidden="true">♥</span>
+    <span class="float-heart fh-3" aria-hidden="true">♥</span>
+    <span class="float-heart fh-4" aria-hidden="true">♥</span>
+
+    <div class="container text-center position-relative">
+      <p class="eyebrow eyebrow--center eyebrow--light reveal">
+        <span class="eyebrow-line"></span>One last thing<span class="eyebrow-line"></span>
+      </p>
+      <h2 class="section-title section-title--light reveal">Because three years deserves a <em>little magic</em>.</h2>
+      <p class="surprise-sub reveal">
+        I made you something. It's not wrapped, but it does come with confetti.
+        Press the button — I promise it's worth it.
+      </p>
+      <button class="surprise-btn reveal" type="button" id="surpriseBtn">
+        <i class="bi bi-stars"></i> Click for a surprise <i class="bi bi-heart-fill"></i>
+      </button>
+      <p class="surprise-note reveal">(Go on, you know you want to.)</p>
+    </div>
+  </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-monogram">P <span>&amp;</span> H</div>
+      <p class="footer-line">Three years of us. A lifetime to go.</p>
+      <ul class="footer-nav">
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#gallery">Memories</a></li>
+        <li><a href="#letter">The Letter</a></li>
+        <li><a href="#surprise">A Surprise</a></li>
+      </ul>
+      <div class="footer-bottom">
+        <p>© <span id="footerYear">2026</span> Made with love, for you.</p>
+        <a href="#home" class="back-to-top">Back to the beginning <i class="bi bi-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+  <!-- ============ LIGHTBOX MODAL ============ -->
+  <div class="modal fade lightbox-modal" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxCaption" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <button type="button" class="lightbox-close" data-bs-dismiss="modal" aria-label="Close photo viewer">
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <div class="lightbox-figure">
+          <button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous photo">
+            <i class="bi bi-arrow-left"></i>
+          </button>
+          <figure class="lightbox-image-wrap">
+            <img id="lightboxImage" src="assets/first-hello.svg" alt="">
+            <figcaption class="lightbox-caption">
+              <span id="lightboxMeta"></span>
+              <strong id="lightboxCaption"></strong>
+            </figcaption>
+          </figure>
+          <button type="button" class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next photo">
+            <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ LOVE LETTER MODAL ============ -->
+  <div class="modal fade letter-modal" id="letterModal" tabindex="-1" aria-labelledby="letterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close letter">
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <div class="letter-paper">
+          <p class="letter-date">၂၀၂၆ ခုနှစ်၊ နိုဝင်ဘာလ (၁၂) ရက် - တို့ရဲ့ သုံးနှစ်မြောက် နှစ်ပတ်လည်နေ့</p>
+          <h2 class="letter-salutation" id="letterTitle">ချစ်ရတဲ့ ကိုကိုရဲ့မိန်းလေး,</h2>
+          <div class="letter-body">
+            <p>
+              လွန်ခဲ့တဲ့ သုံးနှစ်က မိန်းဟာ ကိုယ့်ဘဝထဲကို ဝင်ရောက်လာခဲ့ပြီး အရာရာတိုင်းကို တိတ်တဆိတ်နဲ့ ပိုပြီး နူးညံ့သိမ်မွေ့သွားစေခဲ့တယ်။ အဲဒီအချိန်ကစပြီး သာမန်နေ့ရက်တွေတောင်မှ မိန်းနဲ့အတူ ရှိနေရုံလေးနဲ့တင် အရမ်းလှမတဲ့ အလှတွေနဲ့ ကို့ကို့ရင်ထဲမှာပြည့်နှက်နေခဲ့တယ်။
+            </p>
+            <p>
+              နှလုံးသားထဲကနေ အသံထွက်အောင် ရယ်မောတတ်တဲ့ မိန်းရဲ့ ရယ်သံလေးကို ကိုယ်ချစ်တယ်။ မနက်ခင်းတိုင်းမိန်းဆီကစာ‌ေလး၊ ပြီးတော့ ဘယ်နေရာမှာပဲ ဖြစ်ဖြစ်၊ ဘယ်နေဘဲရောက်နေရောက်နေ မိန်းရှိနေရင် အိမ်ကို ရောက်နေရသလို ခံစားရစေတဲ့ ပုံစံလေးတွေကို ကိုယ်ချစ်တယ်။ မိန်းရှေ့မှာဆိုရင် ကိုယ်က ဘယ်သူမှန်း ဟန်ဆောင်နေစရာ မလိုဘဲ ကိုယ့်ရဲ့ စစ်မှန်တဲ့ ပုံစံအတိုင်းသာ နေလို့ရတာကိုလည်း ကိုယ်အချစ်ဆုံးပါပဲ။
+            </p>
+            <p>
+              ဒီသုံးနှစ်တာ ကာလအတွင်းမှာ ကိုတို့တွေ တစ်ယောက်လက်ကိုတစ်ယောက်ဆုပ်ကိုင်ကျရင်း အများကြီး ဖြတ်သန်းလာခဲ့တယ်။ တစ်ယောက်နဲ့တစ်ယောက်ရဲ့ အစွန်းအထင်း၊ အားနည်းချက်တွေကို နားလည်လက်ခံခဲ့ကြပြီး ရာသီဥတု အချိန်တွေ ဘယ်လိုပဲပြောင်းပြောင်း တစ်ယောက်ကိုတစ်ယောက် ရွေးချယ်ခဲ့ကြတယ်။ ဘဝကို တစ်ကျော့ပြန် ရွေးချယ်ခွင့်သာရှိမယ်ဆိုရင်လည်း — ဘဝပေါင်း ထောင်ချီ၊ အချိန်ကာလပေါင်း ထောင်ချီထဲမှာတောင် ကိုယ်က မိန်းကိုပဲ ထပ်ပြီး ရွေးချယ်ဦးမှာပါ၊ ပြီးတော့ အရင်ကထက် ပိုတောင် မြန်မြန်ဆန်ဆန် ရွေးချယ်မိမှာ သေချာပါတယ်။
+            </p>
+            <p>
+              ကိုယ့်အတွက် ငြိမ်သက်အေးချမ်းမှုနဲ့ စွန့်စားခန်းလည်းဖြစ်၊ အလုံခြုံဆုံး နေရာလေးနဲ့ ကိုယ်အချစ်ဆုံး လူသားလည်း ဖြစ်ပေးတဲ့အတွက် ကျေးဇူးတင်ပါတယ်။ သုံးနှစ်တာ ကာလအတွက် ဂုဏ်ပြုပါတယ်။ ပြီးတော့ လှပတဲ့ တစ်ရက်ချင်းစီနဲ့ တည်ဆောက်မယ့် ထာဝရ အချိန်တွေအတွက်ပါ ရည်ညွှန်းလိုက်ပါကြောင်း —
+            </p>
+          </div>
+          <p class="letter-signoff">ထာဝရနဲ့ &amp; တစ်ရက် ပိုလို့တောင်…,</p>
+          <p class="letter-signature">ကို့ရဲ့တစ်ဦးတည်းသော...ချစ်လှစွာသော မိန်း</p>
+          <div class="letter-seal" aria-hidden="true"><i class="bi bi-heart-fill"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SURPRISE MODAL ============ -->
+  <div class="modal fade surprise-modal" id="surpriseModal" tabindex="-1" aria-labelledby="surpriseTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close surprise">
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <div class="surprise-badge"><i class="bi bi-stars"></i></div>
+        <p class="surprise-kicker">Surprise, my love</p>
+        <h3 id="surpriseTitle">You're my favorite <em>everything</em>.</h3>
+        <p id="surpriseMessage">You are my favorite hello, my hardest goodbye, and my favorite everything in between.</p>
+        <div class="surprise-actions">
+          <button type="button" class="btn-romance" id="surpriseAgain">
+            <i class="bi bi-arrow-repeat"></i> One more
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
