@@ -9,25 +9,16 @@
    1. Configuration
    -------------------------------------------------------------------------- */
 const CONFIG = {
-  // The exact 3-year anniversary (local time). Month is 0-indexed: 10 = November.
+  // The day it all began (local time). Month is 0-indexed: 10 = November.
+  startDate: new Date(2023, 10, 12, 0, 0, 0),
+  // The exact 3-year anniversary (local time).
   anniversaryDate: new Date(2026, 10, 12, 0, 0, 0),
 };
-
-// The relationship began exactly three years before the anniversary (12 Nov 2023).
-// Deriving it keeps the elapsed counter from ever showing 3 full years early.
-CONFIG.startDate = new Date(
-  CONFIG.anniversaryDate.getFullYear() - 3,
-  CONFIG.anniversaryDate.getMonth(),
-  CONFIG.anniversaryDate.getDate(),
-  0,
-  0,
-  0
-);
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* --------------------------------------------------------------------------
-   2. Live anniversary countdown
+   2. Live "time together" counter
    -------------------------------------------------------------------------- */
 const counterEls = {
   years: document.getElementById('counterYears'),
@@ -45,45 +36,55 @@ function addYears(date, amount) {
   return next;
 }
 
-function getCountdownParts(now, target) {
-  if (now >= target) {
-    return { years: 0, days: 0, hours: 0, minutes: 0, seconds: 0, complete: true };
+// Time shared since `start`, broken into calendar years plus the remainder.
+function getElapsedParts(now, start) {
+  if (now < start) {
+    return { years: 0, days: 0, hours: 0, minutes: 0, seconds: 0, started: false };
   }
 
-  // Count complete calendar years remaining, then the rest of the countdown.
-  let years = target.getFullYear() - now.getFullYear();
-  let anchor = addYears(now, years);
-  if (anchor > target) {
+  // Count complete calendar years first so leap years are handled correctly.
+  let years = now.getFullYear() - start.getFullYear();
+  let anchor = addYears(start, years);
+  if (anchor > now) {
     years -= 1;
-    anchor = addYears(now, years);
+    anchor = addYears(start, years);
   }
 
-  let remainder = target.getTime() - anchor.getTime();
-  const days = Math.floor(remainder / 86400000);
-  remainder -= days * 86400000;
-  const hours = Math.floor(remainder / 3600000);
-  remainder -= hours * 3600000;
-  const minutes = Math.floor(remainder / 60000);
-  remainder -= minutes * 60000;
-  const seconds = Math.floor(remainder / 1000);
+  // Whole calendar days since the year anchor (DST-safe, unlike ms division).
+  const MS_PER_DAY = 86400000;
+  const anchorMidnight = Date.UTC(anchor.getFullYear(), anchor.getMonth(), anchor.getDate());
+  const nowMidnight = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+  let days = Math.round((nowMidnight - anchorMidnight) / MS_PER_DAY);
 
-  return { years, days, hours, minutes, seconds, complete: false };
+  let secondsToday =
+    now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
+  secondsToday -= anchor.getHours() * 3600 + anchor.getMinutes() * 60 + anchor.getSeconds();
+  if (secondsToday < 0) {
+    secondsToday += 86400;
+    days -= 1;
+  }
+
+  const hours = Math.floor(secondsToday / 3600);
+  const minutes = Math.floor((secondsToday % 3600) / 60);
+  const seconds = secondsToday % 60;
+
+  return { years, days, hours, minutes, seconds, started: true };
 }
 
-let countdownComplete = null;
+let elapsedStarted = null;
 
-function updateCountdownCaption(isComplete) {
+function updateCounterCaption(started) {
   const caption = document.getElementById('counterCaption');
-  if (!caption || countdownComplete === isComplete) return;
-  countdownComplete = isComplete;
-  caption.innerHTML = isComplete
-    ? '<i class="bi bi-heart-fill"></i> Our 3rd anniversary is here'
-    : '<i class="bi bi-heart-fill"></i> Counting down to our 3rd anniversary';
+  if (!caption || elapsedStarted === started) return;
+  elapsedStarted = started;
+  caption.innerHTML = started
+    ? '<i class="bi bi-heart-fill"></i> Loving you for'
+    : '<i class="bi bi-heart-fill"></i> Our story begins on 12 November 2023';
 }
 
 function updateCounter() {
   const now = new Date();
-  const parts = getCountdownParts(now, CONFIG.anniversaryDate);
+  const parts = getElapsedParts(now, CONFIG.startDate);
 
   if (counterEls.years) counterEls.years.textContent = pad(parts.years);
   if (counterEls.days) counterEls.days.textContent = pad(parts.days);
@@ -91,10 +92,16 @@ function updateCounter() {
   if (counterEls.minutes) counterEls.minutes.textContent = pad(parts.minutes);
   if (counterEls.seconds) counterEls.seconds.textContent = pad(parts.seconds);
 
-  updateCountdownCaption(parts.complete);
+  updateCounterCaption(parts.started);
 
-  // Keep the "days of us" totals counting the time already shared.
-  const totalDays = Math.max(0, Math.floor((now - CONFIG.startDate) / 86400000));
+  // Keep the "days of us" total on calendar days, so DST never shifts it.
+  const startMidnight = Date.UTC(
+    CONFIG.startDate.getFullYear(),
+    CONFIG.startDate.getMonth(),
+    CONFIG.startDate.getDate()
+  );
+  const nowMidnight = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+  const totalDays = Math.max(0, Math.round((nowMidnight - startMidnight) / 86400000));
   document.querySelectorAll('[data-total-days]').forEach((el) => {
     el.textContent = totalDays.toLocaleString('en-US');
   });
@@ -103,8 +110,18 @@ function updateCounter() {
   if (footerYear) footerYear.textContent = String(now.getFullYear());
 }
 
-updateCounter();
-window.setInterval(updateCounter, 1000);
+// Tick on the second boundary so the seconds digit never skips or lags.
+function scheduleCounter() {
+  updateCounter();
+  window.setTimeout(scheduleCounter, 1000 - (Date.now() % 1000));
+}
+
+scheduleCounter();
+
+// Catch up immediately when the tab becomes visible again (timers are throttled).
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden) updateCounter();
+});
 
 /* --------------------------------------------------------------------------
    3. Floating heart particles (hero canvas)
